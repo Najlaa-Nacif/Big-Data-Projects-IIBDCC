@@ -1,6 +1,6 @@
 # Big Data — Travaux Pratiques
 
-**Réalisé par :** Khalid AIT M'HAMED
+**Réalisé par :** NACIF Najlaa
 
 **Encadré par :** Pr. Abdelmajid BOUSSELHAM
 
