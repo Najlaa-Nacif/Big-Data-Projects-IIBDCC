@@ -1,6 +1,6 @@
 ﻿# TP 3 - Spark SQL : Analyse de données de location de vélos
 
-> **Réalisé par** : Khalid AIT M'HAMED  
+> **Réalisé par** : NACIF Najlaa  
 
 > **Module** : Big Data — MII BDCC  
 
