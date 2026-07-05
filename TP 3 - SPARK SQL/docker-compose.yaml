@@ -1,0 +1,27 @@
+services:
+    spark-master:
+        image: apache/spark:4.1.1
+        container_name: spark-master
+        hostname: spark-master
+        command: >
+            /opt/spark/bin/spark-class org.apache.spark.deploy.master.Master
+            --host spark-master --port 7077 --webui-port 8080
+        ports:
+            - "8080:8080"   # Spark master Web UI
+            - "7077:7077"   # Spark master port (spark://spark-master:7077)
+        volumes:
+            - ./:/opt/spark-apps
+
+    spark-worker:
+        image: apache/spark:4.1.1
+        container_name: spark-worker
+        hostname: spark-worker
+        command: >
+            /opt/spark/bin/spark-class org.apache.spark.deploy.worker.Worker
+            spark://spark-master:7077 --webui-port 8081
+        depends_on:
+            - spark-master
+        ports:
+            - "8081:8081"   # Spark worker Web UI
+        volumes:
+            - ./:/opt/spark-apps

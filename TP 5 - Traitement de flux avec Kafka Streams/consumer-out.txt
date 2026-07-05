@@ -1,0 +1,224 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< ma.rafik:TP4_kafka-streams >---------------------
+[INFO] Building TP4_kafka-streams 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- exec:3.1.0:java (default-cli) @ TP4_kafka-streams ---
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2026-06-18T19:32:49.494+02:00  INFO 24292 --- [click-consumer-app] [sumerApp.main()] m.r.exercice3.consumer.ClickConsumerApp  : Starting ClickConsumerApp using Java 17.0.17 with PID 24292 (C:\Users\DELL\IdeaProjects\TP4_kafka-streams\target\classes started by DELL in C:\Users\DELL\IdeaProjects\TP4_kafka-streams)
+2026-06-18T19:32:49.502+02:00  INFO 24292 --- [click-consumer-app] [sumerApp.main()] m.r.exercice3.consumer.ClickConsumerApp  : The following 1 profile is active: "consumer"
+2026-06-18T19:32:52.267+02:00  INFO 24292 --- [click-consumer-app] [sumerApp.main()] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-06-18T19:32:52.291+02:00  INFO 24292 --- [click-consumer-app] [sumerApp.main()] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T19:32:52.292+02:00  INFO 24292 --- [click-consumer-app] [sumerApp.main()] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-06-18T19:32:52.426+02:00  INFO 24292 --- [click-consumer-app] [sumerApp.main()] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-18T19:32:52.431+02:00  INFO 24292 --- [click-consumer-app] [sumerApp.main()] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2857 ms
+2026-06-18T19:32:52.691+02:00  INFO 24292 --- [click-consumer-app] [sumerApp.main()] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-06-18T19:32:53.656+02:00  INFO 24292 --- [click-consumer-app] [sumerApp.main()] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path ''
+2026-06-18T19:32:53.759+02:00  INFO 24292 --- [click-consumer-app] [sumerApp.main()] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-click-consumer-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = click-consumer-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2026-06-18T19:32:53.852+02:00  INFO 24292 --- [click-consumer-app] [sumerApp.main()] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-06-18T19:32:54.267+02:00  INFO 24292 --- [click-consumer-app] [sumerApp.main()] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2026-06-18T19:32:54.274+02:00  INFO 24292 --- [click-consumer-app] [sumerApp.main()] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2026-06-18T19:32:54.276+02:00  INFO 24292 --- [click-consumer-app] [sumerApp.main()] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1781803974260
+2026-06-18T19:32:54.291+02:00  INFO 24292 --- [click-consumer-app] [sumerApp.main()] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Subscribed to topic(s): click-counts
+2026-06-18T19:32:54.343+02:00  INFO 24292 --- [click-consumer-app] [sumerApp.main()] m.r.exercice3.consumer.ClickConsumerApp  : Started ClickConsumerApp in 5.842 seconds (process running for 12.975)
+2026-06-18T19:32:55.547+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Cluster ID: WxgEdyCBRfW1eTmCywiK0A
+2026-06-18T19:32:55.550+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2026-06-18T19:32:55.557+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] (Re-)joining group
+2026-06-18T19:32:55.605+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Request joining group due to: need to re-join with the given member-id: consumer-click-consumer-group-1-36fb3351-3dfb-48ea-a5f8-17a88e8052eb
+2026-06-18T19:32:55.607+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] (Re-)joining group
+2026-06-18T19:32:58.629+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Successfully joined group with generation Generation{generationId=1, memberId='consumer-click-consumer-group-1-36fb3351-3dfb-48ea-a5f8-17a88e8052eb', protocol='range'}
+2026-06-18T19:32:58.663+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Finished assignment for group at generation 1: {consumer-click-consumer-group-1-36fb3351-3dfb-48ea-a5f8-17a88e8052eb=Assignment(partitions=[click-counts-0])}
+2026-06-18T19:32:58.678+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Successfully synced group in generation Generation{generationId=1, memberId='consumer-click-consumer-group-1-36fb3351-3dfb-48ea-a5f8-17a88e8052eb', protocol='range'}
+2026-06-18T19:32:58.681+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Notifying assignor about the new Assignment(partitions=[click-counts-0])
+2026-06-18T19:32:58.691+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Adding newly assigned partitions: click-counts-0
+2026-06-18T19:32:58.703+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Found no committed offset for partition click-counts-0
+2026-06-18T19:32:58.727+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Resetting offset for partition click-counts-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=2}}.
+2026-06-18T19:32:58.730+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : click-consumer-group: partitions assigned: [click-counts-0]
+Clics reçus - clé: user1, total: 20
+Clics reçus - clé: user1, total: 21
+Clics reçus - clé: user1, total: 22
+Clics reçus - clé: user1, total: 23
+2026-06-18T19:33:28.858+02:00  INFO 24292 --- [click-consumer-app] [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-18T19:33:28.860+02:00  INFO 24292 --- [click-consumer-app] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-18T19:33:28.862+02:00  INFO 24292 --- [click-consumer-app] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-06-18T19:54:51.300+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Node -1 disconnected.
+2026-06-18T19:54:51.302+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Disconnecting from node 1 due to request timeout.
+2026-06-18T19:54:51.302+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Cancelled in-flight FETCH request with correlation id 1905 due to node 1 being disconnected (elapsed time since creation: 491347ms, elapsed time since send: 491347ms, throttle time: 0ms, request timeout: 30000ms)
+2026-06-18T19:54:51.304+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Error sending fetch request (sessionId=983316783, epoch=1611) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2026-06-18T19:54:51.322+02:00  INFO 24292 --- [click-consumer-app] [-consumer-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2026-06-18T19:54:51.323+02:00  INFO 24292 --- [click-consumer-app] [-consumer-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2026-06-18T19:54:51.324+02:00  INFO 24292 --- [click-consumer-app] [-consumer-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Client requested disconnect from node 2147483646
+2026-06-18T19:54:55.304+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2026-06-18T19:54:55.369+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Attempt to heartbeat with Generation{generationId=1, memberId='consumer-click-consumer-group-1-36fb3351-3dfb-48ea-a5f8-17a88e8052eb', protocol='range'} and group instance id Optional.empty failed due to UNKNOWN_MEMBER_ID, resetting generation
+2026-06-18T19:54:55.381+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Resetting generation and member id due to: encountered UNKNOWN_MEMBER_ID from HEARTBEAT response
+2026-06-18T19:54:55.381+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Request joining group due to: encountered UNKNOWN_MEMBER_ID from HEARTBEAT response
+2026-06-18T19:54:55.383+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Giving away all assigned partitions as lost since generation/memberID has been reset,indicating that consumer is in old state or no longer part of the group
+2026-06-18T19:54:55.385+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Lost previously assigned partitions click-counts-0
+2026-06-18T19:54:55.387+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : click-consumer-group: partitions lost: [click-counts-0]
+2026-06-18T19:54:55.397+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : click-consumer-group: partitions revoked: [click-counts-0]
+2026-06-18T19:54:55.405+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] (Re-)joining group
+2026-06-18T19:54:55.530+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Request joining group due to: need to re-join with the given member-id: consumer-click-consumer-group-1-9fb3c909-b318-49f2-b683-b0e136445602
+2026-06-18T19:54:55.612+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] (Re-)joining group
+2026-06-18T19:54:58.664+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Successfully joined group with generation Generation{generationId=3, memberId='consumer-click-consumer-group-1-9fb3c909-b318-49f2-b683-b0e136445602', protocol='range'}
+2026-06-18T19:54:58.668+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Finished assignment for group at generation 3: {consumer-click-consumer-group-1-9fb3c909-b318-49f2-b683-b0e136445602=Assignment(partitions=[click-counts-0])}
+2026-06-18T19:54:58.672+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Successfully synced group in generation Generation{generationId=3, memberId='consumer-click-consumer-group-1-9fb3c909-b318-49f2-b683-b0e136445602', protocol='range'}
+2026-06-18T19:54:58.674+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Notifying assignor about the new Assignment(partitions=[click-counts-0])
+2026-06-18T19:54:58.674+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Adding newly assigned partitions: click-counts-0
+2026-06-18T19:54:58.678+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition click-counts-0 to the committed offset FetchPosition{offset=4, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=4}}
+2026-06-18T19:54:58.678+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : click-consumer-group: partitions assigned: [click-counts-0]
+2026-06-18T19:59:41.410+02:00  INFO 24292 --- [click-consumer-app] [-consumer-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2026-06-18T19:59:41.410+02:00  INFO 24292 --- [click-consumer-app] [-consumer-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2026-06-18T19:59:41.411+02:00  INFO 24292 --- [click-consumer-app] [-consumer-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Client requested disconnect from node 2147483646
+2026-06-18T19:59:43.785+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2026-06-18T19:59:43.805+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Attempt to heartbeat failed since coordinator localhost:9092 (id: 2147483646 rack: null) is either not started or not valid
+2026-06-18T19:59:43.809+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+2026-06-18T19:59:43.812+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2026-06-18T19:59:43.814+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Client requested disconnect from node 2147483646
+2026-06-18T19:59:44.312+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2026-06-18T19:59:44.318+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Attempt to heartbeat with Generation{generationId=3, memberId='consumer-click-consumer-group-1-9fb3c909-b318-49f2-b683-b0e136445602', protocol='range'} and group instance id Optional.empty failed due to UNKNOWN_MEMBER_ID, resetting generation
+2026-06-18T19:59:44.318+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Resetting generation and member id due to: encountered UNKNOWN_MEMBER_ID from HEARTBEAT response
+2026-06-18T19:59:44.318+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Request joining group due to: encountered UNKNOWN_MEMBER_ID from HEARTBEAT response
+2026-06-18T19:59:44.320+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Giving away all assigned partitions as lost since generation/memberID has been reset,indicating that consumer is in old state or no longer part of the group
+2026-06-18T19:59:44.321+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Lost previously assigned partitions click-counts-0
+2026-06-18T19:59:44.321+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : click-consumer-group: partitions lost: [click-counts-0]
+2026-06-18T19:59:44.321+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : click-consumer-group: partitions revoked: [click-counts-0]
+2026-06-18T19:59:44.324+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] (Re-)joining group
+2026-06-18T19:59:44.330+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Request joining group due to: need to re-join with the given member-id: consumer-click-consumer-group-1-3b6628af-05b4-448e-87a2-03d2c8c5d621
+2026-06-18T19:59:44.332+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] (Re-)joining group
+2026-06-18T19:59:47.348+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Successfully joined group with generation Generation{generationId=5, memberId='consumer-click-consumer-group-1-3b6628af-05b4-448e-87a2-03d2c8c5d621', protocol='range'}
+2026-06-18T19:59:47.348+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Finished assignment for group at generation 5: {consumer-click-consumer-group-1-3b6628af-05b4-448e-87a2-03d2c8c5d621=Assignment(partitions=[click-counts-0])}
+2026-06-18T19:59:47.362+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Successfully synced group in generation Generation{generationId=5, memberId='consumer-click-consumer-group-1-3b6628af-05b4-448e-87a2-03d2c8c5d621', protocol='range'}
+2026-06-18T19:59:47.362+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Notifying assignor about the new Assignment(partitions=[click-counts-0])
+2026-06-18T19:59:47.362+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Adding newly assigned partitions: click-counts-0
+2026-06-18T19:59:47.362+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition click-counts-0 to the committed offset FetchPosition{offset=4, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=6}}
+2026-06-18T19:59:47.362+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : click-consumer-group: partitions assigned: [click-counts-0]
+Clics reçus - clé: user1, total: 27
+Clics reçus - clé: user1, total: 28
+Clics reçus - clé: user1, total: 32
+2026-06-18T20:04:05.248+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Revoke previously assigned partitions click-counts-0
+2026-06-18T20:04:05.249+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : click-consumer-group: partitions revoked: [click-counts-0]
+2026-06-18T20:04:05.250+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Member consumer-click-consumer-group-1-3b6628af-05b4-448e-87a2-03d2c8c5d621 sending LeaveGroup request to coordinator localhost:9092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2026-06-18T20:04:05.251+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2026-06-18T20:04:05.252+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Request joining group due to: consumer pro-actively leaving the group
+2026-06-18T20:04:05.253+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Unsubscribed all topics or patterns and assigned partitions
+2026-06-18T20:04:05.257+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2026-06-18T20:04:05.258+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-click-consumer-group-1, groupId=click-consumer-group] Request joining group due to: consumer pro-actively leaving the group
+2026-06-18T20:04:05.488+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2026-06-18T20:04:05.490+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-06-18T20:04:05.490+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2026-06-18T20:04:05.490+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2026-06-18T20:04:05.504+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-click-consumer-group-1 unregistered
+2026-06-18T20:04:05.504+02:00  INFO 24292 --- [click-consumer-app] [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : click-consumer-group: Consumer stopped
+Terminer le programme de commandes (O/N)ÿ? 
